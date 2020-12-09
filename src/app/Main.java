@@ -29,6 +29,7 @@ public class Main extends JFrame {
     private void execute() {
         this.block = new Block(4,4);
         this.blockDisplay.display(block);
+        this.block.register(blockDisplay);
         this.setVisible(true);
         
     }

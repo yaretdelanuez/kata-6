@@ -10,6 +10,7 @@ import view.BlockDisplay;
 class BlockPanel  extends JPanel implements BlockDisplay{
     private static final int SIZE = 100;
     private Block block;
+    @Override
     public void paint(Graphics g){
         g.setColor(Color.white); 
         g.fillRect(0,0, getWidth(), getHeight());
@@ -31,6 +32,11 @@ class BlockPanel  extends JPanel implements BlockDisplay{
     @Override
     public void display(Block block) {
         this.block = block;
+        repaint();
+    }
+
+    @Override
+    public void changed() {
         repaint();
     }
     
